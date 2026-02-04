@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - Đăng ký người dùng</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav><a href="index.html">Quay lại trang chủ</a></nav>
+    <div style="padding: 20px;">
+        <form id="regForm" onsubmit="validateForm(event)">
+            <h2>Đăng ký tài khoản</h2>
+            <input type="text" id="fullname" placeholder="Họ và tên" required>
+            <input type="email" id="email" placeholder="Email (ví dụ: mssv@gmail.com)" required>
+            <input type="password" id="password" placeholder="Mật khẩu (8+ ký tự, đủ A-z, 0-9)" required>
+            <div style="margin: 10px 0;">
+                <input type="checkbox" id="agree" style="width: auto;"> Tôi đồng ý với điều khoản
+            </div>
+            <button type="submit">Đăng ký ngay</button>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
