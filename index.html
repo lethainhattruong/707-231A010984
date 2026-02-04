@@ -3,41 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thi Kết Thúc Học Phần - 231A010984</title>
+    <title>ĐỀ THI KẾT THÚC HỌC PHẦN - 231A010984</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">Trang chủ</a>
-        <a href="baitap01.html">Bài 1</a>
-        <a href="baitap02.html">Bài 2</a>
-        <a href="baitap03.html">Bài 3</a>
+        <a href="index.html">Trang chủ (Lý thuyết)</a>
+        <a href="baitap01.html">Bài 1 (Sản phẩm)</a>
+        <a href="baitap02.html">Bài 2 (Form)</a>
+        <a href="baitap03.html">Bài 3 (Đồng hồ)</a>
         <a href="baitap14.html">BT 14</a>
     </nav>
 
     <header>
-        <h1>ĐỀ THI KẾT THÚC HỌC PHẦN: LẬP TRÌNH WEB</h1>
-        <p>Sinh viên thực hiện: <b>Nguyễn Văn A</b> | MSSV: <b>231A010984</b></p>
+        <h1 style="color: #2563eb;">ĐỀ THI LẬP TRÌNH WEB - ĐỀ SỐ 1</h1>
+        <p>Sinh viên: <b>231A010984</b> | Hình thức: <b>Mở</b></p>
     </header>
 
-    <main>
-        <h2>Phần 1: Lý thuyết (40 điểm)</h2>
-        <div class="theory-item">
-            <h3>1. Position Absolute vs Relative</h3>
-            <p><b>Relative:</b> Định vị tương đối so với vị trí gốc, vẫn giữ chỗ trong layout. <b>Absolute:</b> Định vị theo phần tử cha có position, bị tách khỏi document flow. Ví dụ: Dùng Relative cho khung ảnh và Absolute cho nút "Mua ngay" đè lên ảnh.</p>
-        </div>
-        <div class="theory-item">
-            <h3>2. Domain, Hosting & DNS</h3>
-            <p>Quy trình: Mua Domain -> Thuê Hosting -> Trỏ DNS. DNS giúp chuyển đổi tên miền thành IP. Công cụ hỗ trợ: GitHub Pages, Netlify. Rủi ro: Lộ dữ liệu nếu không có SSL/HTTPS.</p>
-        </div>
-        <div class="theory-item">
-            <h3>3. Let, Const, Var</h3>
-            <p>Var có hoisting và function scope. Let/Const có block scope. Lỗi thường gặp: Gán lại giá trị cho Const. Debug bằng F12 -> Console.</p>
-        </div>
-        <div class="theory-item">
-            <h3>4. Event Delegation</h3>
-            <p>Là kỹ thuật gán 1 listener cho cha để quản lý tất cả con. Giúp tiết kiệm bộ nhớ khi danh sách sản phẩm thay đổi động.</p>
-        </div>
+    <main class="theory-section">
+        <h2 style="border-left: 5px solid #2563eb; padding-left: 10px;">Phần 1: Lý thuyết (40 điểm)</h2>
+
+        <article class="theory-item">
+            <h3>1. So sánh Position Absolute và Relative</h3>
+            <p><b>- Khác biệt:</b> Relative giữ chỗ trong layout và định vị theo vị trí gốc. Absolute thoát khỏi luồng tài liệu và định vị theo cha gần nhất có <code>position</code>.</p>
+            <p><b>- Ví dụ:</b> Dùng <code>position: relative</code> cho khung ảnh sản phẩm và <code>position: absolute</code> cho nhãn "New" bám ở góc ảnh.</p>
+            <p><b>- Deployment:</b> Giúp layout responsive ổn định trên mobile và web khi deploy lên hosting.</p>
+        </article>
+
+        <article class="theory-item">
+            <h3>2. Quy trình Domain, Hosting và DNS</h3>
+            <p><b>- Quy trình:</b> Đăng ký Domain -> Thuê Hosting -> Cấu hình bản ghi A/CNAME trong DNS để trỏ tên miền về IP server.</p>
+            <p><b>- DNS:</b> Đóng vai trò là bộ thông dịch từ tên miền (dễ nhớ) sang địa chỉ IP (máy tính hiểu).</p>
+            <p><b>- Công cụ:</b> GitHub Pages, Netlify. Rủi ro bảo mật nếu thiếu chứng chỉ SSL (HTTPS).</p>
+        </article>
+
+        <article class="theory-item">
+            <h3>3. Phân biệt Let, Const và Var</h3>
+            <p><b>- So sánh:</b> <code>var</code> có phạm vi hàm và bị hoisting. <code>let/const</code> có phạm vi khối (block scope). <code>const</code> không thể gán lại giá trị.</p>
+            <p><b>- Debug:</b> Khi gặp lỗi "Assignment to constant variable", ta dùng <b>Chrome DevTools (F12)</b>, vào tab <i>Console</i> để xem dòng lỗi hoặc <i>Sources</i> để đặt Breakpoint.</p>
+        </article>
+
+        <article class="theory-item">
+            <h3>4. Khái niệm Event Delegation</h3>
+            <p><b>- Giải thích:</b> Là kỹ thuật lắng nghe sự kiện tại phần tử cha thay vì từng phần tử con đơn lẻ, tận dụng cơ chế Event Bubbling.</p>
+            <p><b>- Ứng dụng:</b> Xử lý hàng loạt sự kiện click cho các thẻ <code>&lt;li&gt;</code> trong một danh sách động mà không cần gán lại sự kiện mỗi khi thêm mục mới.</p>
+        </article>
     </main>
+
+    <footer style="margin-top: 50px; text-align: center; color: #64748b;">
+        <p>Copyright © 2026 - MSSV 231A010984</p>
+    </footer>
 </body>
 </html>
