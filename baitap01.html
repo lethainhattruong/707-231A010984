@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Danh sách sản phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav><a href="index.html">Quay lại trang chủ</a></nav>
+    <div style="padding: 20px;">
+        <h2>Tìm kiếm sản phẩm</h2>
+        <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm..." onkeyup="searchProduct()">
+        <p id="errorMsg" style="display:none; color:red; font-weight:bold;">Rất tiếc, không tìm thấy sản phẩm!</p>
+        
+        <div id="productContainer" class="grid-layout">
+            <div class="card"><h3>Laptop Dell</h3><p>15.000.000đ</p></div>
+            <div class="card"><h3>iPhone 15</h3><p>22.000.000đ</p></div>
+            <div class="card"><h3>Chuột Gaming</h3><p>800.000đ</p></div>
+            <div class="card"><h3>Bàn phím cơ</h3><p>1.500.000đ</p></div>
+            <div class="card"><h3>Tai nghe Sony</h3><p>4.000.000đ</p></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
